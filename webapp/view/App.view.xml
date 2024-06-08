@@ -1,7 +1,44 @@
-<mvc:View controllerName="b23c234.controller.App"
-    xmlns:html="http://www.w3.org/1999/xhtml"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <App id="app">
-    </App>
+<mvc:View
+        controllerName="b23c234.controller.App"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc">
+
+        <Shell id="shell">
+
+            <App id="app">
+
+                <pages>
+
+                    <Page>  
+
+                        <content>
+
+                            <Panel headerText="{i18n>panel}">
+
+                                <content>
+
+                                    <Button id="button"
+                                            text="{i18n>hello}" 
+                                            width="120px" 
+                                            type="Emphasized" 
+                                            tooltip="{i18n>hello}"
+                                            press="onShowMessage"/>
+
+                                    <Input value="{view>/Details/0/Details/0/Property}"
+                                            width="60%"/>
+
+                                </content>
+
+                            </Panel>
+
+                        </content>
+
+                    </Page>
+
+                </pages>
+
+            </App>
+
+        </Shell>
+
 </mvc:View>
