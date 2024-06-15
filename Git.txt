@@ -1,5 +1,5 @@
 git config --global user.email 
-git config --glibal user.name
+git config --global user.name
 git remote add origin URL
 git branch -M main/master
 git add .
