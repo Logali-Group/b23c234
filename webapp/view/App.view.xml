@@ -13,23 +13,9 @@
 
                         <content>
 
-                            <Panel headerText="{i18n>panel}">
-
-                                <content>
-
-                                    <Button id="button"
-                                            text="{i18n>hello}" 
-                                            width="120px" 
-                                            type="Emphasized" 
-                                            tooltip="{i18n>hello}"
-                                            press="onShowMessage"/>
-
-                                    <Input value="{view>/Details/0/Details/0/Property}"
-                                            width="60%"/>
-
-                                </content>
-
-                            </Panel>
+                            <mvc:XMLView id="HelloPanel" 
+                                        viewName="b23c234.view.HelloPanel"
+                                        type="XML"/>
 
                         </content>
 
