@@ -35,29 +35,7 @@ sap.ui.define([
         },
 
         onOpenDialog: function () {
-
-            let oView = this.getView();
-
-            if (!this._pDialog) {
-                this._pDialog = Fragment.load({
-                    id: oView.getId(),
-                    name: "b23c234.fragment.HelloDialog",
-                    controller: this
-                }).then(function (oDialog) {
-                    oView.addDependent(oDialog);
-                    return oDialog;
-                });
-            }
-
-            this._pDialog.then(function (oDialog) {
-                oDialog.open();
-            });
-        },
-
-        onCancel: function () {
-            this._pDialog.then(function (oDialog) {
-                oDialog.close();
-            });
+            this.getOwnerComponent().openHelloDialog();
         }
 
     });

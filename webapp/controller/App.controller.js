@@ -41,6 +41,9 @@ sap.ui.define([
             this.getView().setModel(oModel, "view");
         },
 
+        onOpenDialogHeader: function () {
+          this.getOwnerComponent().openHelloDialog();
+        }
         // onBeforeRendering: function () {
 
         // },

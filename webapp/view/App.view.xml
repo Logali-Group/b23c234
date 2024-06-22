@@ -11,6 +11,15 @@
 
                     <Page>  
 
+                        <headerContent>
+
+                                <Button id="helloDialogHeader"
+                                        icon="sap-icon://action"
+                                        press="onOpenDialogHeader"
+                                        class="sapUiSmallMarginEnd"/>
+                        
+                        </headerContent>
+
                         <content>
 
                             <mvc:XMLView id="HelloPanel" 

@@ -5,6 +5,12 @@
     <Dialog id="helloDialog"
             title="{i18n>hello}, {view>/FullName}">
 
+        <content>
+
+                <core:Icon src="sap-icon://hello-world" size="8rem"/>
+        
+        </content>
+
         <beginButton>
                 <Button
                         text="{i18n>OK}"
