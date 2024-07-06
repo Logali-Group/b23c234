@@ -26,6 +26,10 @@
                                         viewName="b23c234.view.HelloPanel"
                                         type="XML"/>
 
+                            <mvc:XMLView id="InvoicesList"
+                                        viewName="b23c234.view.InvoicesList"
+                                        type="XML"/>
+
                         </content>
 
                     </Page>

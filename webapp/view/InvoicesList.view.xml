@@ -1,0 +1,56 @@
+<mvc:View
+            controllerName="b23c234.controller.InvoicesList"
+            xmlns="sap.m"
+            xmlns:mvc="sap.ui.core.mvc">
+
+    <List   id="invoiceList"
+            headerText="{i18n>invoiceListTitle}"
+            class="sapUiResponsiveMargin"
+            items="{
+                path:'northwind>/Invoices',
+                filters:[
+                    {
+                        path: 'ShipperName',
+                        operator: 'EQ',
+                        value1: 'United Package'
+                    }
+                ],
+                sorter: {
+                    path: 'ShipperName',
+                    group: true
+                }
+            }"
+            width="auto">
+
+            <headerToolbar>
+                <Toolbar>
+                    <Title text="{i18n>invoiceListTitle}"/>
+                    <ToolbarSpacer/>
+                    <SearchField id="searchField" width="50%" liveChange="onFilterInvoices"/>
+                </Toolbar>
+            </headerToolbar>
+
+            <ObjectListItem title="{northwind>Quantity} x {northwind>ProductName}"
+                            number="{
+                                parts:[
+                                    {path: 'northwind>ExtendedPrice'},
+                                    {path: 'currency>/USD'}
+                                ],
+                                type: 'sap.ui.model.type.Currency',
+                                formatOptions: {
+                                    showMeasure: false
+                                }
+                            }"
+                            numberUnit="{currency>/USD}"
+                            numberState="{= ${northwind>ExtendedPrice} > 50 ? 'Success' : 'Error'}">
+                <!-- <firstStatus>
+                    <ObjectStatus text="{
+                        path:'invoices>Status',
+                        formatter: '.formatterController.invoiceStatus'
+                    }"/>
+                </firstStatus> -->
+            </ObjectListItem>
+
+    </List>
+
+</mvc:View>
