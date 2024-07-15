@@ -6,15 +6,10 @@
     <List   id="invoiceList"
             headerText="{i18n>invoiceListTitle}"
             class="sapUiResponsiveMargin"
+            growing="true"
+            growingScrollToLoad="true"
             items="{
                 path:'northwind>/Invoices',
-                filters:[
-                    {
-                        path: 'ShipperName',
-                        operator: 'EQ',
-                        value1: 'United Package'
-                    }
-                ],
                 sorter: {
                     path: 'ShipperName',
                     group: true
@@ -42,7 +37,9 @@
                                 }
                             }"
                             numberUnit="{currency>/USD}"
-                            numberState="{= ${northwind>ExtendedPrice} > 50 ? 'Success' : 'Error'}">
+                            numberState="{= ${northwind>ExtendedPrice} > 50 ? 'Success' : 'Error'}"
+                            type="Navigation"
+                            press="onNavToDetails">
                 <!-- <firstStatus>
                     <ObjectStatus text="{
                         path:'invoices>Status',

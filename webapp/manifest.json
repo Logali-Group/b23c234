@@ -99,20 +99,26 @@
             },
             "routes": [
                 {
-                    "name": "RouteMain",
-                    "pattern": ":?query:",
+                    "name": "RouteApp",
+                    "pattern": "",
                     "target": [
-                        "TargetMain"
+                        "TargetOverview"
+                    ]
+                },
+                {
+                    "name":"RouteDetails",
+                    "pattern":"details/{path}",
+                    "target": [
+                        "TargetDetails"
                     ]
                 }
             ],
             "targets": {
-                "TargetMain": {
-                    "viewType": "XML",
-                    "transition": "slide",
-                    "clearControlAggregation": false,
-                    "viewId": "Main",
-                    "viewName": "Main"
+                "TargetOverview": {
+                    "viewName": "Overview"
+                },
+                "TargetDetails":{
+                    "viewName": "Details"
                 }
             }
         },

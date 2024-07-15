@@ -1,0 +1,31 @@
+<mvc:View
+        controllerName="b23c234.controller.Overview"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc">
+
+            <Page title="{i18n>appTitle}">  
+
+                <headerContent>
+
+                        <Button id="helloDialogHeader"
+                                icon="sap-icon://action"
+                                press="onOpenDialogHeader"
+                                class="sapUiSmallMarginEnd"/>
+                
+                </headerContent>
+
+                <content>
+
+                    <mvc:XMLView id="HelloPanel" 
+                                viewName="b23c234.view.HelloPanel"
+                                type="XML"/>
+
+                    <mvc:XMLView id="InvoicesList"
+                                viewName="b23c234.view.InvoicesList"
+                                type="XML"/>
+
+                </content>
+
+            </Page>
+
+</mvc:View>

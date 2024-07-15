@@ -55,6 +55,19 @@ sap.ui.define([
                 let oBinding = oList.getBinding("items");
                 oBinding.filter(aFilters);
             }
+        },
+
+        onNavToDetails: function (oEvent) {
+
+            let oItem = oEvent.getSource();
+            let oBindingContext = oItem.getBindingContext("northwind");
+            let sPath = oBindingContext.getPath();
+            let sEncode = window.encodeURIComponent(sPath);
+
+            const oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("RouteDetails",{
+                path: sEncode
+            });
         }
 
     });
